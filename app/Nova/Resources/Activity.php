@@ -123,6 +123,9 @@ class Activity extends Resource
     {
         return array_merge($this->mainFields(), [
             new Panel('Date and price settings', $this->pricingFields()),
+
+            HasMany::make('Tickets', 'tickets', ActivityTicket::class),
+
             new Panel('Enrollment settings', $this->enrollmentFields()),
 
             HasMany::make('Enrollments', 'enrollments', Enrollment::class),

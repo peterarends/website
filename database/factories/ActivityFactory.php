@@ -78,6 +78,7 @@ $factory->define(Activity::class, function (Faker $faker) use ($buildFakeEditorJ
         'name' => $faker->words(4, true),
         'tagline' => $faker->sentence($faker->numberBetween(3, 8)),
         'description' => $buildFakeEditorJsMessage($faker),
+        'statement' => $faker->word,
 
         // Dates
         'start_date' => $eventStartCarbon,

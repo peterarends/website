@@ -166,6 +166,16 @@ class Activity extends SluggableModel implements AttachableInterface
     }
 
     /**
+     * Returns tickets
+     *
+     * @return HasMany
+     */
+    public function tickets(): HasMany
+    {
+        return $this->hasMany(ActivityTicket::class);
+    }
+
+    /**
      * Returns if the activity has been cancelled
      *
      * @return bool
